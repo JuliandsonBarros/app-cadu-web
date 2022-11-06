@@ -1,0 +1,14 @@
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    
+}
+
+tittle{
+    color: #673ab7;
+}
+
+button {
+    margin: 20px 15px 0px 0px;
+}

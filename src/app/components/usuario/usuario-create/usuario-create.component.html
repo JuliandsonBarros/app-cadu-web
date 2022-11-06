@@ -1,0 +1,44 @@
+<app-header></app-header>
+<app-nav></app-nav>
+<app-footer></app-footer>
+<div style="margin-left: 210px; margin-right: 10px;">
+<mat-card>
+    <mat-card-title>Novo Usuário</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome Completo"
+                [(ngModel)]="usuario.nom_usuario" name="nom_usuario" maxlength="200">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="E-Mail"
+                [(ngModel)]="usuario.nom_email" name="nom_email" maxlength="200">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Data de Nascimento"
+                [(ngModel)]="usuario.dta_nascimento" name="dta_nascimento">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="CPF"
+                [(ngModel)]="usuario.cod_cpf" name="cod_cpf"/>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="RG"
+                [(ngModel)]="usuario.cod_rg" name="cod_rg"/>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Telefone"
+                [(ngModel)]="usuario.cod_telefone" name="cod_telefone">
+        </mat-form-field>
+        
+    </form> 
+    <button mat-raised-button (click)="createUsuario()" color="primary">
+        Salvar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>
+</div>
+
+
