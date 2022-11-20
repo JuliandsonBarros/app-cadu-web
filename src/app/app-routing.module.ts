@@ -7,6 +7,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/views/home/home.component';
 import { SecretariaComponent } from './components/views/secretaria/secretaria.component';
+import { UsuarioReadComponent } from './components/usuario/usuario-read/usuario-read.component';
 
 const routes: Routes = [
 
@@ -29,11 +30,7 @@ const routes: Routes = [
   },
   {
     path: "secretaria/update/:id",
-    component: SecretariaComponent
-  },
-  {
-    path: "secretaria/delete/:id",
-    component: SecretariaComponent
+    component: SecretariaCreateComponent
   },
   {
     path: "usuarios",
@@ -43,7 +40,10 @@ const routes: Routes = [
     path: "usuario/create",
     component: UsuarioCreateComponent
   },
-  
+  {
+    path: "usuario/update/:id",
+    component: UsuarioCreateComponent
+  },
 ];
 
 @NgModule({

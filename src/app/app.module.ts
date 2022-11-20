@@ -13,6 +13,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from  '@angular/material/button';
 import { MatSnackBarModule } from  '@angular/material/snack-bar';
 import { HttpClientModule } from  '@angular/common/http';
+import {MatSelectModule} from '@angular/material/select';
 
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -30,6 +31,7 @@ import { UsuarioComponent } from './components/views/usuario/usuario.component';
 import { UsuarioReadComponent } from './components/usuario/usuario-read/usuario-read.component';
 import { UsuarioCreateComponent } from './components/usuario/usuario-create/usuario-create.component';
 import { LoginComponent } from './components/autentica/login/login.component';
+import { NgxMaskModule, IConfig} from 'ngx-mask'
 
 @NgModule({
   declarations: [
@@ -63,6 +65,8 @@ import { LoginComponent } from './components/autentica/login/login.component';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatSelectModule,
+    NgxMaskModule.forRoot({dropSpecialCharacters: false}),
   ],
   providers: [],
   bootstrap: [AppComponent]

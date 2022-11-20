@@ -3,7 +3,7 @@
 <app-footer></app-footer>
 <div style="margin-left: 210px; margin-right: 10px;">
 <mat-card>
-    <mat-card-title>Novo Usuário</mat-card-title>
+    <mat-card-title>{{ usuario.id_usuario ? 'Atualizar Cadastro' : 'Novo Usuário' }}</mat-card-title>
     <form>
         <mat-form-field>
             <input matInput placeholder="Nome Completo"
@@ -15,11 +15,11 @@
         </mat-form-field>
         <mat-form-field>
             <input matInput placeholder="Data de Nascimento"
-                [(ngModel)]="usuario.dta_nascimento" name="dta_nascimento">
+                [(ngModel)]="usuario.dta_nascimento" name="dta_nascimento" mask="00/00/0000">
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="CPF"
-                [(ngModel)]="usuario.cod_cpf" name="cod_cpf"/>
+            <input matInput placeholder="CPF" 
+            [(ngModel)]="usuario.cod_cpf"  name="cod_cpf" />
         </mat-form-field>
         <mat-form-field>
             <input matInput placeholder="RG"
@@ -27,12 +27,17 @@
         </mat-form-field>
         <mat-form-field>
             <input matInput placeholder="Telefone"
-                [(ngModel)]="usuario.cod_telefone" name="cod_telefone">
+                [(ngModel)]="usuario.cod_telefone" name="cod_telefone" prefix="+55" mask="(00)00000-0000" >
         </mat-form-field>
         
     </form> 
-    <button mat-raised-button (click)="createUsuario()" color="primary">
+    
+    <button *ngIf="!usuario.id_usuario" mat-raised-button (click)="atualizaOuCria()" color="primary">
         Salvar
+    </button>
+
+    <button *ngIf="usuario.id_usuario" mat-raised-button (click)="atualizaOuCria()" color="primary">
+        Atualizar
     </button>
     
     <button mat-raised-button (click)="cancel()">
