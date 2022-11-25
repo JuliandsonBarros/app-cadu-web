@@ -33,7 +33,7 @@
 
       <ng-container matColumnDef="sta_usuario">
         <th mat-header-cell *matHeaderCellDef>Situação</th>
-        <td mat-cell *matCellDef="let row">{{ row.sta_usuario != 'A' ? 'Ativo' : 'Inativo'}}</td>
+        <td mat-cell *matCellDef="let row">{{ row.sta_usuario == 'A' ? 'Ativo' : 'Inativo'}}</td>
       </ng-container>
 
 

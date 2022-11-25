@@ -31,7 +31,10 @@ import { UsuarioComponent } from './components/views/usuario/usuario.component';
 import { UsuarioReadComponent } from './components/usuario/usuario-read/usuario-read.component';
 import { UsuarioCreateComponent } from './components/usuario/usuario-create/usuario-create.component';
 import { LoginComponent } from './components/autentica/login/login.component';
-import { NgxMaskModule, IConfig} from 'ngx-mask'
+import { NgxMaskModule, IConfig} from 'ngx-mask';
+import { HistoricoReadComponent } from './components/historico/historico-read/historico-read.component';
+import { HistoricoComponent } from './components/views/historico/historico.component';
+import { LocalDateTimePipe } from './shared/pipe/local-date-time.pipe'
 
 @NgModule({
   declarations: [
@@ -46,7 +49,10 @@ import { NgxMaskModule, IConfig} from 'ngx-mask'
     UsuarioComponent,
     UsuarioReadComponent,
     UsuarioCreateComponent,
-    LoginComponent
+    LoginComponent,
+    HistoricoReadComponent,
+    HistoricoComponent,
+    LocalDateTimePipe
   ],
   imports: [
     BrowserModule,
@@ -68,7 +74,9 @@ import { NgxMaskModule, IConfig} from 'ngx-mask'
     MatSelectModule,
     NgxMaskModule.forRoot({dropSpecialCharacters: false}),
   ],
-  providers: [],
+  providers: [
+    LocalDateTimePipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

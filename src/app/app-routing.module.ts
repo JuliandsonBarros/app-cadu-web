@@ -8,6 +8,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/views/home/home.component';
 import { SecretariaComponent } from './components/views/secretaria/secretaria.component';
 import { UsuarioReadComponent } from './components/usuario/usuario-read/usuario-read.component';
+import { HistoricoReadComponent } from './components/historico/historico-read/historico-read.component';
+import { HistoricoComponent } from './components/views/historico/historico.component';
 
 const routes: Routes = [
 
@@ -35,6 +37,10 @@ const routes: Routes = [
   {
     path: "usuarios",
     component: UsuarioComponent
+  },
+  {
+    path: "historico",
+    component: HistoricoComponent
   },
   {
     path: "usuario/create",

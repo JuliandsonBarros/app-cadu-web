@@ -4,7 +4,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Usuario } from '../../usuario/Usuario-model';
 import { UsuarioService } from '../../usuario/usuario.service';
-import { outputAst } from '@angular/compiler';
+
 
 @Component({
   selector: 'app-secretaria-create',
